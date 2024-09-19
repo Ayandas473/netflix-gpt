@@ -6,7 +6,13 @@
 - Header and backGround for LoginPage
 - Login and SignUp Form 
 - Adding Validation to Sign-in for Sign-up form
-
+- Firebase setup 
+- Deploying our application into production
+- create signup and sign-in user with firebase API
+- create the redux store with usersSlice
+- update the user Profile with displayName and profile Picture
+- update the redux store with the user data in the time of login
+- remove the user from the store when the user is logout
 
 
 # Feature 
