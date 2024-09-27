@@ -1,19 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './Header'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { API_OPTION } from '../utils/constant'
+import { json } from 'react-router-dom'
+import { addNowPlayingMovies } from '../utils/movieSlice'
+import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
+import MainContainer from './MainContainer'
+import SecondaryContainer from './SecondaryContainer'
+import usePopular from '../hooks/usePopular'
+import useTopRatedMovies from '../hooks/useTopRatedMovies'
+import useUpcomingMovies from '../hooks/useUpcomingMovies'
 
 const Browse = () => {
 
-    const user = useSelector((store)=>store.user);
-
+  useNowPlayingMovies();
+  usePopular();
+  useTopRatedMovies();
+  useUpcomingMovies();
+  
   return (
     <div>
         <Header/>
-        <div className="p-48">
-           <marquee behavior="scroll" direction="left">
-                <h1 className="font-bold text-4xl">Welcome {user?.displayName}, We are under Maintenance. We will notify you soon</h1>
-            </marquee>
-</div>
+        <MainContainer />   
+        <SecondaryContainer />     
     </div>
   )
 }

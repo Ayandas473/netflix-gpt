@@ -13,6 +13,19 @@
 - update the user Profile with displayName and profile Picture
 - update the redux store with the user data in the time of login
 - remove the user from the store when the user is logout
+- Fix a major bug for protecting routes
+- Unsubscribed to the OnAuthStateChanged callback
+- Register to TMDB and create an app and get the access token and go to documentation for the api
+- create custom hook for get the data of now playing movies and store in out redux 
+- Planning for maincontainer and secondary container
+- fetch data for trailer video and update store with trailer video data
+- embeded youtube video and adding tailwind for make main container.
+- create the title part for the main container and adding the description and title and adding 
+  tailwind for making 
+- planning for the secondary container for the movieList and moviesCard
+- fetch the popular, upcoming, and trending data and update in the store
+- fetch the poster_path from all the data and add the poster to the card and configure tailwind 
+- complte the secondary cotainer 
 
 
 # Feature 
